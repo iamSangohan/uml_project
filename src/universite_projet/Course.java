@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 public class Course {
 	public int courseNo;

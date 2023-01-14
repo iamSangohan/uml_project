@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 import java.util.Hashtable;
 
@@ -40,6 +40,5 @@ public class CourseExecution {
     public void addSupportEmployee(Employee employee, ERole role, int hours) {
         support.put(employee, new Support(role, hours));
     }
-
 
 }

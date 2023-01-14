@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 import java.util.List;
 import java.util.stream.Collectors;

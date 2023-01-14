@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 public enum ESemester {
 	winter, summer, FALL

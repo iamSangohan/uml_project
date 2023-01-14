@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 public abstract class UniversityMember {
 	public String prenom;

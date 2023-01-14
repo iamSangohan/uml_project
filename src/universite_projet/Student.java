@@ -1,4 +1,4 @@
-package uml_project;
+package universite_projet;
 
 public class Student extends UniversityMember {
 	public int matNo;
@@ -10,22 +10,26 @@ public class Student extends UniversityMember {
 	    this.matNo = matNo;
 	    this.completedCourses = new CourseExecution[0];
 	}
-
+    
     public void addCompletedCourse(CourseExecution course) {
-        if (completedCourses == null) {
-            completedCourses = new CourseExecution[1];
+        if(course != null){
+          if (completedCourses == null) {
+            completedCourses = new CourseExecution[0];
             completedCourses[0] = course;
-        } else {
-            int n = completedCourses.length;
-            CourseExecution[] temp = new CourseExecution[n + 1];
-            System.arraycopy(completedCourses, 0, temp, 0, n);
-            temp[n] = course;
-            completedCourses = temp;
+          } else {
+        	for (int i = 0; i < completedCourses.length; i++) {
+                if (completedCourses[i].semester == null) {
+                	completedCourses[i] = course;
+                }
+            } 
+          }
+        }else {
+          System.out.println("Instance course complete est null");
         }
     }
 
     public void printCompletedCourses() {
-        System.out.println("Completed Courses:");
+        System.out.println("Les cours completés par l'etudiant "+ this.nom +" sont :");
         for (int i = 0; i < completedCourses.length; i++) {
             System.out.println(completedCourses[i].getCourseName());
         }

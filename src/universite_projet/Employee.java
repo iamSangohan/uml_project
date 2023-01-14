@@ -1,8 +1,8 @@
-package uml_project;
+package universite_projet;
 
 public class Employee extends UniversityMember {
 	private int acctNo;
-	public CourseExecution[] coursTermine;
+	public CourseExecution[] completedCourses;
 	
     public Employee(String firstName, String lastName, int ssNo, int acctNo) {
         super(firstName, lastName, ssNo);
@@ -13,23 +13,23 @@ public class Employee extends UniversityMember {
     	return acctNo;
     }
 	
-    public void ajouterCoursTermine(CourseExecution course) {
-        if (coursTermine == null) {
-            coursTermine = new CourseExecution[1];
-            coursTermine[0] = course;
+    public void ajoutercompletedCourses(CourseExecution course) {
+        if (completedCourses == null) {
+            completedCourses = new CourseExecution[1];
+            completedCourses[0] = course;
         } else {
-            int n = coursTermine.length;
+            int n = completedCourses.length;
             CourseExecution[] temp = new CourseExecution[n + 1];
-            System.arraycopy(coursTermine, 0, temp, 0, n);
+            System.arraycopy(completedCourses, 0, temp, 0, n);
             temp[n] = course;
-            coursTermine = temp;
+            completedCourses = temp;
         }
     }
     
-    public void afficherCoursTermine() {
+    public void affichercompletedCourses() {
         System.out.println("Completed Courses:");
-        for (int i = 0; i < coursTermine.length; i++) {
-            System.out.println(coursTermine[i].getCourseName());
+        for (int i = 0; i < completedCourses.length; i++) {
+            System.out.println(completedCourses[i].getCourseName());
         }
     }
 
